@@ -30,6 +30,8 @@ import javax.swing.*;
             buttonPanel.addTab("Seans", seansButton);
             add(buttonPanel);
             setVisible(true);
+
+
         }
     }
 
