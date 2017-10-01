@@ -1,6 +1,8 @@
 package com.cinema;
 
+import com.cinema.entity.presenter.HomePresenter;
 import com.cinema.entity.presenter.MoviePresenter;
+import com.cinema.entity.view.movieview.HomeView;
 import com.cinema.entity.view.movieview.MovieView;
 
 import javax.swing.*;
@@ -35,16 +37,24 @@ import java.awt.event.WindowEvent;
             });
             setSize(600, 400);
 
+
+            HomeView widokHome = new HomeView();
+            JPanel home = widokHome.homeDetails();
+            HomePresenter homePresenter = new HomePresenter(widokHome);
+
             MovieView widokFilmu = new MovieView();
             MoviePresenter moviePresenter = new MoviePresenter(widokFilmu);
             JPanel movies = widokFilmu.getContentPanel();
             moviePresenter.ShowMovieList();
-
             JPanel seansButton= new JPanel();
+//            JPanel homeButton = new JPanel();
             JTabbedPane buttonPanel = new JTabbedPane();
+            buttonPanel.addTab("Home", home);
             buttonPanel.addTab("Movies", movies);
             buttonPanel.addTab("Seans", seansButton);
             setContentPane(buttonPanel);
+
+
             setVisible(true);
 
 
