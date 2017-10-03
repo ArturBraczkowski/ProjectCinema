@@ -38,9 +38,9 @@ import java.awt.event.WindowEvent;
             setSize(600, 400);
 
 
-            HomeView widokHome = new HomeView();
-            JPanel home = widokHome.homeDetails();
-            HomePresenter homePresenter = new HomePresenter(widokHome);
+//            HomeView widokHome = new HomeView();
+//            JPanel home = widokHome.homeDetails();
+//            HomePresenter homePresenter = new HomePresenter(widokHome);
 
             MovieView widokFilmu = new MovieView();
             MoviePresenter moviePresenter = new MoviePresenter(widokFilmu);
@@ -49,7 +49,7 @@ import java.awt.event.WindowEvent;
             JPanel seansButton= new JPanel();
 //            JPanel homeButton = new JPanel();
             JTabbedPane buttonPanel = new JTabbedPane();
-            buttonPanel.addTab("Home", home);
+//            buttonPanel.addTab("Home", home);
             buttonPanel.addTab("Movies", movies);
             buttonPanel.addTab("Seans", seansButton);
             setContentPane(buttonPanel);
